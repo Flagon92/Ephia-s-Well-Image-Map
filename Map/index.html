@@ -14,16 +14,15 @@
     <div class="container">
       <header>
         <h1>Map of Ephia's Well</h1>
-        <p class="subtitle">An Interactive Cartographer's Guide</p>
+        <p class="subtitle">An Interactive Guide</p>
         <p class="description">
-          Explore the mystical lands and hidden secrets by clicking the watchful
-          eyes upon the map
+          Explore the main hub for EFU: Sands of Intrigue
         </p>
       </header>
 
       <div class="diagram-container">
         <div class="diagram-wrapper">
-          <!-- Your fantasy map image -->
+          <!-- fantasy map image -->
           <img
             src="../Resources/mapEphia'sWell.jpg"
             alt="Map of Ephia's Well"
@@ -31,7 +30,7 @@
             id="diagram"
           />
 
-          <!-- Example location pins - Adjust these coordinates! -->
+          <!--location pins -->
           <button
             class="pin"
             style="left: 14.7%; top: 28.3%"
@@ -113,7 +112,28 @@
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
               <circle cx="12" cy="12" r="3"></circle>
             </svg>
-            <span class="pin-label">Pyramid</span>
+            <span class="pin-label">The Pyramid</span>
+          </button>
+
+          <button
+            class="pin"
+            style="left: 53.7%; top: 37.9%;"
+            data-modal="modal-cistern"
+            data-label="Cistern"
+          >
+            <svg
+              class="pin-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a62323"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span class="pin-label">The Cistern</span>
           </button>
         </div>
       </div>
@@ -135,7 +155,7 @@
         </div>
       </div>
 
-      <!-- Fantasy Location Modals -->
+      <!-- Location Modals -->
       <div class="modal" id="modal-krak-des-roses">
         <div class="modal-content">
           <div class="modal-header">
@@ -355,6 +375,50 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="modal-cistern">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">The Cistern</h2>
+            <p class="modal-subtitle">
+              Where the Waters of the Well gather
+            </p>
+            <button class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <h3>Description</h3>
+              <p>
+                Description of the cistern, the pilgrim statue and the waters
+              </p>
+              <p>
+                explanation of why they're so important and mysterious
+              </p>
+              <div class="lore-text">"Spread the waters; its channels and tributaries are arteries of the world."</div>
+            </div>
+
+            <div class="modal-section">
+              <h3>Notable Features</h3>
+              <ul class="features-list">
+                <li>
+                  <strong>Statue of the Pilgrim:</strong> This enormous sandstone statue is of a hooded and androgynous figure clasping a bowl or cup.
+                  Like other statues of giants that litter the Citadel of Ephia’s Well, it is very old and certainly greatly predates the more recent constructions. 
+                  It is popularly known as “the Pilgrim” and stretches from some unknown depth to rise above the center of the Citadel’s Plaza. A grove has been cut into it so as to allow the waters of the well to spill from the bowl and into a pool.
+                  There are several conflicting legends about what it is intended to depict...
+                </li>
+                <li>
+                  <strong>The Kneeling Giants:</strong> These sand scoured and weathered figures of tremendous size, kneeling upon the sand, can be found in and around the Well. It is unclear whether they kneel in respect or defeated submission.”
+                </li>
+                <li>
+                  <strong>The Holy Waters:</strong> Ephia’s Well is a satrapy of Baz’eel, and it provides the water that Baz’eel so greatly needs and desires.
+                  The strange substance that makes Ephia's Well a place worth fighting over. A requirement for potion-making and life-living alike.
+                  The Waterbearers of B'aara hold the Waters to be the tears of the goddess herself, come to reinvigorate the world, though many question this statement. 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
             
 
