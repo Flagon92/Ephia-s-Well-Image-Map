@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map of Ephia's Well - Interactive Fantasy Map</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Map of Ephia's Well</h1>
+        <p class="subtitle">An Interactive Cartographer's Guide</p>
+        <p class="description">
+          Explore the mystical lands and hidden secrets by clicking the watchful
+          eyes upon the map
+        </p>
+      </header>
+
+      <div class="diagram-container">
+        <div class="diagram-wrapper">
+          <!-- Your fantasy map image -->
+          <img
+            src="../Resources/mapEphia'sWell.jpg"
+            alt="Map of Ephia's Well"
+            class="diagram-image"
+            id="diagram"
+          />
+
+          <!-- Example location pins - Adjust these coordinates! -->
+          <button
+            class="pin"
+            style="left: 14.7%; top: 28.3%"
+            data-modal="modal-krak-des-roses"
+            data-label="Krak des Roses"
+          >
+            <svg
+              class="pin-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a62323"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span class="pin-label">Krak des Roses</span>
+          </button>
+
+          <button
+            class="pin"
+            style="left: 86.3%; top: 29.8%"
+            data-modal="modal-janissary-garrison"
+            data-label="Janissary Garrison"
+          >
+            <svg
+              class="pin-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a62323"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span class="pin-label">Janissary Garrison</span>
+          </button>
+
+          <button
+            class="pin"
+            style="left: 39.6%; top: 16.6%"
+            data-modal="modal-eagles-mount"
+            data-label="Eagle's Mount"
+          >
+            <svg
+              class="pin-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a62323"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span class="pin-label">Eagle's Mount</span>
+          </button>
+
+          <button
+            class="pin"
+            style="left: 73.1%; top: 17.3%"
+            data-modal="modal-pyramid"
+            data-label="Pyramid"
+          >
+            <svg
+              class="pin-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a62323"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span class="pin-label">Pyramid</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="legend">
+        <div class="legend-item">
+          <svg
+            class="legend-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#a62323"
+            stroke-width="2"
+          >
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span>Clickable Locations</span>
+        </div>
+      </div>
+
+      <!-- Fantasy Location Modals -->
+      <div class="modal" id="modal-krak-des-roses">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">The Krak des Roses</h2>
+            <p class="modal-subtitle">Headquarters of the Cinquefoil Rose</p>
+            <button class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <h3>Description</h3>
+              <p>
+                The Cinquefoil Rose is a coalition of the forces that once
+                fought tooth and nail to free Ephia's Well from Orentid
+                occupation. Originally composed of refugees and heroes from
+                far-away places, it now exists as a populist movement and formal
+                alliance of the occupants of the Krak des Roses. Crucial to the
+                citadel's defense, and bearing a never-quite-suppressed enmity
+                for Baz'eel and her Janissaries, the Cinquefoil Rose blooms
+                still in Ephia's Well... thorns and all.
+              </p>
+              <div class="lore-text">
+                "We the swift remember to ye the dead, all the red blood that
+                beats in our hearts."
+              </div>
+            </div>
+
+            <div class="modal-section">
+              <h3>Notable Features</h3>
+              <ul class="features-list">
+                <li>
+                  <strong>College of Balladeers of the Lost Heart:</strong> The
+                  Balladeers of the Lost Hearth still follow the noble ideals of
+                  the old Rose. Originally the squires, troubadours, servants
+                  and sons of the original Cinquefoil Rose they have banded
+                  together and do all they can to keep the legacy of their
+                  fallen forebears alive. They are forever seeking a prophesied
+                  hero who shall claim "the Cup," the mystical relic whose
+                  waters might reinvigorate the arid sands.
+                </li>
+                <li>
+                  <strong>Fortress of the Banda Rossa:</strong> The Banda Rossa
+                  are a mercenary company under exclusive contract with the
+                  Grandmaster of the Cinquefoil Rose. They serve as the bulk of
+                  the military might of the Knights of the Cinquefoil Rose.
+                </li>
+                <li>
+                  <strong>The Sisters of the Sibylline Vine:</strong> A monastic
+                  community of mystics, seers, fanatics and scholars united by
+                  shared consumption of a sacred wine, called "the Drink" by
+                  laymen. This wine is said to grant them visions of things that
+                  have yet to pass. They serve as the mystic foundation of the
+                  cause.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-janissary-garrison">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Janissary Garrison</h2>
+            <p class="modal-subtitle">
+              Headquarters of the 4th Legion of Janissaries
+            </p>
+            <button class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <h3>Description</h3>
+              <p>
+                The IVth Legion of the Sultan's Janissaries has been given the
+                dubious privilege of maintaining law and order in Ephia's Well.
+                Called "the Misfortune" by their compeers in Baz'eel, they are
+                dominated by an obsession with their perceived ill luck.
+                Carrying charms and following their own superstitions, they
+                prowl the Well looking for ne'er-do-wells... and "ensuring" they
+                find a fair few each time.
+              </p>
+              <p>
+                Unfortunately for them, they are also the Well's first line of
+                defense against invasion, and many find themselves on the wrong
+                end of a barbarian's axe, or dragged to Qa'im to suffer a fate
+                worse than death.
+              </p>
+              <div class="lore-text">"Toss the ash..."</div>
+            </div>
+
+            <div class="modal-section">
+              <h3>Notable Features</h3>
+              <ul class="features-list">
+                <li>
+                  <strong>'The Misfortune':</strong> The 4th Legion is plagued
+                  by a legendary string of bad luck, and is looked down upon by
+                  the other Legions of the Sultan as the runt of the litter.
+                  Regardless, the soldiers of the 4th go about their duty with
+                  grim determination.
+                </li>
+                <li>
+                  <strong>Tossing the Ash:</strong> A common superstition
+                  amongst the soldiers of the 4th. Many of them carry pouches of
+                  ash on their belt, to toss over their shoulder in order to
+                  drive bad luck away. Many in the 4th also consider Urazzir,
+                  The Wroth, as their patron god in the hopes that he will drive
+                  misfortune away from them.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-eagles-mount">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Eagle's Mount</h2>
+            <p class="modal-subtitle">
+              Headquarters of the Astronomers of Q'tolip
+            </p>
+            <button class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <h3>Description</h3>
+              <p>
+                The Astronomers of Q'tolip are the free-thinking, eccentric
+                collection of scholars gathered under the banner of the
+                enigmatic and brilliant visionary, Q'tolip. Seeking to master
+                the cosmos through scholarship, they are constantly engaged in
+                the quest for knowledge of yore, and indulge in the power that
+                comes from such things.
+              </p>
+              <p>
+                In more practical terms, they are the primary archaeologists and
+                magical authority of Ephia's Well, and their maintenance of the
+                Shade affords them influence that few other organizations can
+                boast. Often, the quest for knowledge is hindered by the
+                unlearned, and the Astronomers understand well that their search
+                can only be strengthened by cultivating a safe environment for
+                their studies to bear fruit.
+              </p>
+              <div class="lore-text">"As above, so below."</div>
+            </div>
+
+            <div class="modal-section">
+              <h3>Notable Features</h3>
+              <ul class="features-list">
+                <li>
+                  <strong>The Celestial Disc:</strong> The Astronomers believe
+                  that the moon, or the Celestial Disc, is the fulcrum of our
+                  Universe. All rules which anchor the soul draw from it, and
+                  not from elsewhere. All others are mistaken, and all other
+                  readings are untrue.
+                </li>
+                <li>
+                  <strong>Q'tolip the Exile:</strong> The Astronomers have their
+                  origins in the Grand Academy of Baz'eel, and Q'tolip was once
+                  a respected lecturer there. Following his revelation - that
+                  the Universe revolves around the Celestial Disc, the Moon, and
+                  that all other universal constants must be so re-ordered, he
+                  was expelled from the Academies - and the Astronomers are
+                  those who followed him into exile.
+                </li>
+                <li>
+                  <strong>The Shade:</strong> Or the Nasaru, is the means by
+                  which the Astronomers proved their worth to the Assembly. A
+                  mysterious magical artifact rumoured to have been crafted by
+                  the giants themselves, it serves as a protective shell against
+                  the Ash, keeping the citadel of Ephia's Well safe from the
+                  deadly storms that plague the waste.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-pyramid">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">The Pyramid of Ephia's Well</h2>
+            <p class="modal-subtitle">Seat of the Government and home to the Assembly</p>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-section">
+                <h3>Description</h3>
+                <p>Ephia's Well is a small-scale fortress and sometimes-settlement that has long occupied a prominent and central spot on the trade routes between the splendorous cities of the desert, straddling a crossroads of the great Giant's Road. It is said to have been built by the ancient giants thousands of years ago; now their ruinous walls form the innermost quarter of the fortress, surrounding a bountiful oasis that flows outwards from tributaries deep within the earth. The surrounding walls have been built and torn down by conquerors, adventurers, and merchants... again and again and again.</p>
+                <p>The most recent incarnation of these attempts at state-building is a small colony-town tucked within the resurgent Sultanate of Baz'eel. It is governed by an assembly of Legates elected from among the Voiced population (those true citizens of the Well who have paid for their right of citizenship) who reign on behalf of the Sultan.</p>
+                <div class="lore-text">
+                    "Our walls, they crumble. Our people, they starve. We must build. We must build a jewel in the desert, a rival to all who behold it..."
+                </div>
+            </div>
+            
+            <div class="modal-section">
+                <h3>Political Leagues</h3>
+                <p>Many of the Legates are drawn from the three most prominent political Leagues of Ephia's Well:</p>
+                <ul class="features-list" style="margin-top: 10px;">
+                    <li><strong>The League of Purple:</strong> Staunch traditionalists who advocate for the sanctity of the Wheel faith and the traditions of the Sultanate.</li>
+                    <li><strong>The League of Gold:</strong> Who value coin over blood. They foster the growth of legitimate enterprise, and seek out trade and riches from the desert beyond.</li>
+                    <li><strong>The League of White:</strong> Who position themselves as voice for the poor and needy. The seek to give voice to the Voiceless, and ensure that no man goes hungry or unpaid.</li>
+                </ul>
+            </div>
+            
+            <div class="modal-section">
+                <h3>Notable Features</h3>
+                <ul class="features-list">
+                    <li>
+                        <strong>The Hall of Governance:</strong> The room where an Assembly formed by the Voiced citizens of the Well gather, and the laws of the Well are chiseled into magical Stele of Law. It is host to many a fierce debate.
+                    </li>
+                    <li>
+                        <strong>The Scribes of the Sublime Garden:</strong> The unceasingly busy bees of the Well, the commendable and highly stressed civil servants of the government. They are constantly collecting information, ensuring that letters arrive on time, and generally serving at the leisure of Ephia's legates. They are the workhorse of the minutiae of governance, and they are forever ensuring that taxes are paid, citizens are registered, and food is stored. Their duties and responsibilities are exhaustive. They, too, are exhausted. But the work is never done.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+
+    <script src="script.js"></script>
+  </body>
+</html>
